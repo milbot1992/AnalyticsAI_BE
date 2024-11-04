@@ -13,6 +13,10 @@ def fetch_data():
         
         # Filtering data where "Time period" is "2020 - 22" & "Category Type" is null
         filtered_data = data[(data['Time period'] == '2020 - 22') & (data['Category Type'].isnull())]
+        # For now reduce date to Persons and just for 2 LAs
+        filtered_data_2 = filtered_data[(filtered_data['Sex'] == 'Persons') & (filtered_data['Area Name'].isin(['Manchester', 'York']))]
+        # Only keep necessary fields
+        reduced_data = 
         
         return filtered_data
     else:

@@ -11,7 +11,6 @@ def calculate_statistics(data):
     
     # Calculate the width of the 95% and 99.8% confidence intervals for additional context
     data['CI_95_width'] = data['Upper CI 95.0 limit'] - data['Lower CI 95.0 limit']
-    data['CI_99.8_width'] = data['Upper CI 99.8 limit'] - data['Lower CI 99.8 limit']
     
     print('Analysis data:', data.head())
     

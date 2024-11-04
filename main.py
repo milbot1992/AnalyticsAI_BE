@@ -4,12 +4,14 @@ from Data.analysis import calculate_statistics
 from Data.gpt_analysis import generate_gpt_commentary
 
 def main():
-    # Step 1: Fetch data and for now filter to just 'Persons'
-    # data = fetch_data()
-    # persons_data = data[(data['Sex'] == 'Persons')]
+    # Define indicators to be used
+    indicator_ids = [40501, 90366]
+
+    # Step 1: Fetch data and for now filter to just 'Persons' and keep for just 2 LAs
+    data = fetch_data()
 
     # Step 2: Calculate statistical metrics and save to csv
-    # stats_data = calculate_statistics(persons_data)
+    stats_data = calculate_statistics(reduced_data)
 
     # Step 3: Generate GPT commentary for each Local Authority
     #csv_file_path = 'Data/indicator_data_20_22.csv'

@@ -1,0 +1,2 @@
+Starting server locally
+uvicorn Endpoints.la_api:app --reload

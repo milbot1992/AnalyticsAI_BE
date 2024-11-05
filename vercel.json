@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
         {
-          "src": "la_api.py",
+          "src": "app.py",
           "use": "@vercel/python"
         }
       ],
     "routes": [
-        { "src": "/local_authority/(.*)", "dest": "la_api.py" },
-        { "src": "/available_options", "dest": "la_api.py" }
+        { "src": "/local_authority/(.*)", "dest": "app.py" },
+        { "src": "/available_options", "dest": "app.py" }
     ]
 }

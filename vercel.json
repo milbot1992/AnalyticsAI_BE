@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+        {
+          "src": "Endpoints/la_api.py",
+          "use": "@vercel/python"
+        }
+      ],
+    "routes": [
+        { "src": "/local_authority/(.*)", "dest": "Endpoints/la_api.py" },
+        { "src": "/available_options", "dest": "Endpoints/la_api.py" }
+    ]
+}

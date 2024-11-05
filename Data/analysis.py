@@ -9,7 +9,7 @@ def calculate_statistics(data):
     data['within_1_std'] = (abs(data['z_score']) <= 1)
     data['within_2_std'] = (abs(data['z_score']) <= 2)
     
-    # Calculate the width of the 95% and 99.8% confidence intervals for additional context
+    # Calculate the width of the 95% confidence intervals for additional context
     data['CI_95_width'] = data['Upper CI 95.0 limit'] - data['Lower CI 95.0 limit']
     
     print('Analysis data:', data.head())

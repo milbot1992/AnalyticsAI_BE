@@ -43,13 +43,24 @@ Setup Instructions
 
     -   Ensure that `.env` is added to `.gitignore` to keep your API key secure.
 
+Testing
+----------------------
+The tests are saved in:
+be_ruby_health/
+└── tests/
+    ├── __init__.py 
+    └── test_api.py
+
+To run the tests run the following command:
+
+    `pytest tests`
 
 Running the API Server
 ----------------------
 
 To start the server locally, use the following command:
 
-`uvicorn Endpoints.la_api:app --reload`
+`uvicorn app:app --reload`
 
 -   The `--reload` option enables automatic reload on code changes, ideal for development.
 

@@ -26,7 +26,7 @@ Setup Instructions
 
 1.  **Clone the Repository**:
 
-    `git clone [<repository-url>](https://github.com/milbot1992/ruby_AI_be)
+    `git clone [<repository-url>](https://github.com/milbot1992/AnalyticsAI_BE)
     cd <repository-directory>`
 
 2.  **Install Dependencies**: Make sure you have Python 3.8 or later. Install the required packages using pip:

@@ -19,12 +19,12 @@ def generate_statistical_insight(row):
     Returns:
         str: The GPT-generated analysis as a string.
     """
-    # Construct a prompt tailored to statistical analysis
+    # Prompt tailored to statistical analysis
     prompt = (
         f"I want you to act as a Statistician. I will provide you with details related with statistics."
         f"You should be knowledge of statistics terminology, statistical distributions, confidence interval," 
         f"probabillity, hypothesis testing and statistical charts."
-        f"Analyse the measure for Local Authority {row['Area Name']} (code: {row['Area Code']}). "
+        f"Analyse the measure for Local Authority {row['Area Name']} (code: {row['Area Code']})."
         f"Return only the key insights, no more than 150 words."
         f"Return any Indicator Values 1 decimal place, any z_scores to 2 decimal places and any percentages to 0 decimal place."
         f"Give the analysis of the measure for the Local Authority in bullet points with the most relevant first. Followed by a short overall summary sentence"
@@ -61,7 +61,6 @@ def generate_statistical_insight(row):
 
         # Access the content of the message
         content_message = response_dict["choices"][0]["message"]["content"]
-        print('content: ', content_message)
 
         # Return the content from GPT's response
         return content_message
@@ -70,9 +69,9 @@ def generate_statistical_insight(row):
         print(f"Error in API call: {e}")
         return "Error: Unable to generate analysis."
 
-def generate_gpt_commentary(data):
+def generate_gpt_commentary():
     """
-    Apply GPT-generated statistical analysis to each row in the DataFrame.
+    Read data from a CSV file, apply GPT-generated statistical analysis to each row in the DataFrame.
 
     Parameters:
         data (pd.DataFrame): DataFrame containing data with required statistical details.
@@ -80,5 +79,17 @@ def generate_gpt_commentary(data):
     Returns:
         pd.DataFrame: Original DataFrame with an additional 'gpt_commentary' column.
     """
+    
+    # Load data from the CSV file
+    input_file = 'data/analysed_data.csv'
+    data = pd.read_csv(input_file)
+
+    # Apply statistical insights to generate GPT commentary
     data['gpt_commentary'] = data.apply(generate_statistical_insight, axis=1)
+
+    # Save the updated data back to the CSV
+    output_file = 'data/analysed_data.csv'
+    data.to_csv(output_file, index=False)
+    print(f"Data with GPT commentary saved to {output_file}")
+
     return data

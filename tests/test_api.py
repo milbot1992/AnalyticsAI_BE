@@ -4,7 +4,7 @@ from app import app
 
 client = TestClient(app)
 
-# Mock data that would typically be in processed_data.csv
+# Mock data same format as processed_data.csv
 MOCK_DATA = {
     "Area Name": ["Manchester", "York"],
     "Indicator Name": ["Under 75 mortality rate from cancer", "Life expectancy at birth"],
@@ -20,7 +20,7 @@ MOCK_DATA = {
 
 @pytest.fixture
 def mock_data(monkeypatch):
-    # Mock data same format as the CSV
+    # Mock data same format as CSV
     import pandas as pd
     mock_df = pd.DataFrame(MOCK_DATA)
     monkeypatch.setattr("pandas.read_csv", lambda *args, **kwargs: mock_df)

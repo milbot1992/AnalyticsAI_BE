@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 # Load data once when the application starts
-DATA_FILE_PATH = os.path.join(os.getcwd(), 'Data', 'processed_data.csv')
+DATA_FILE_PATH = os.path.join(os.getcwd(), 'data', 'processed_data.csv')
 try:
     data = pd.read_csv(DATA_FILE_PATH)
 except FileNotFoundError:

@@ -46,7 +46,7 @@ Setup Instructions
 Testing
 ----------------------
 The tests are saved in:
-be_ruby_health/
+RunConBE/
 └── tests/
     ├── __init__.py 
     └── test_api.py
@@ -65,6 +65,20 @@ To start the server locally, use the following command:
 -   The `--reload` option enables automatic reload on code changes, ideal for development.
 
 The server will run locally at `http://127.0.0.1:8000`.
+
+Data Description
+---------
+### Indicators Used
+Healthy life expectancy at birth	90362
+Life expectancy at birth	90366
+Disability free life expectancy at birth	93562
+Inequality in life expectancy at birth	92901
+Inequality in healthy life expectancy at birth LA	92031
+Inequality in healthy life expectancy at birth ENGLAND	90825
+Healthy life expectancy at 65	93505
+Life expectancy at 65	91102
+Disability-free life expectancy at 65	93523
+Inequality in life expectancy at 65	93190
 
 Endpoints
 ---------

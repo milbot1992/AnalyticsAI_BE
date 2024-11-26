@@ -1,7 +1,0 @@
-Area Name,Area Code,Value,Indicator Name,Indicator ID,Lower CI 95.0 limit,Upper CI 95.0 limit,Compared to England value or percentiles,Denominator,Count,Sex,z_score,within_1_std,within_2_std,CI_95_width
-York,E06000014,130.99759,Under 75 mortality rate from cancer,40501,121.33137,141.22793,Similar,551652.0,682.0,Persons,0.7194369875602159,True,True,19.89655999999998
-Manchester,E08000003,170.05582,Under 75 mortality rate from cancer,40501,161.57734,178.8565,Worse,1600499.0,1574.0,Persons,1.7225754138049743,False,True,17.27916000000002
-York,E06000014,79.47,Life expectancy at birth,90366,78.98,79.96,Better,,,Male,-0.6039538967882334,True,True,0.9799999999999898
-Manchester,E08000003,74.8,Life expectancy at birth,90366,74.48,75.12,Worse,,,Male,-0.7238942128384749,True,True,0.6400000000000006
-York,E06000014,83.37,Life expectancy at birth,90366,82.93,83.82,Better,,,Female,-0.503789607153128,True,True,0.8899999999999864
-Manchester,E08000003,79.22,Life expectancy at birth,90366,78.9,79.54,Worse,,,Female,-0.6103746845853556,True,True,0.6400000000000006

@@ -3,8 +3,8 @@ import logging
 import pandas as pd
 from src.utils.fetch_data import fetch_indicator_data
 from src.analysis.enrich_data import calculate_statistics
-from src.gen_ai.openai_integration import generate_gpt_commentary
-from src.gen_ai.huggingface_pipeline import hugging_face_pipeline
+from src.gen_ai.open_ai.openai_integration import generate_gpt_commentary
+from src.gen_ai.pipeline_steps.huggingface_pipeline import hugging_face_pipeline
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

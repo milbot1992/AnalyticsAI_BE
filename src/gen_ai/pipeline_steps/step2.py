@@ -1,6 +1,5 @@
-import os
 import pandas as pd
-import matplotlib.pyplot as plt
+import logging
 
 def generate_agent_insight(llm_engine, agent):
     """
@@ -59,9 +58,9 @@ def generate_agent_insight(llm_engine, agent):
         # Save the dataframe with the new commentary to a new CSV file
         output_file = 'data/output.csv'
         df.to_csv(output_file, index=False)
-        print(f"Output saved to {output_file}")
+        logging.info(f"Output saved to {output_file}")
         return df
 
     except Exception as e:
-        print(f"Error in generating agent insight: {e}")
+        logging.error(f"Error in generating agent insight: {e}")
         return "Error: Unable to generate agent commentary."
